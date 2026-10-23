@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ISSA Mobile Checkout Prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="stage">
+  <div class="device show-hot" id="device">
+    <main class="screen" id="screen" aria-live="polite"></main>
+    <div class="layer" id="layer" hidden></div>
+  </div>
+
+  <aside class="panel" id="panel" aria-label="Prototype controls">
+    <button class="panel-close" id="panelClose" type="button">Close</button>
+    <div>
+      <h1>ISSA mobile prototype</h1>
+      <p class="lede">Home, product page, bundle picker, cart and the four-step checkout from the ISSA UI kit in Figma.</p>
+    </div>
+    <div>
+      <label class="toggle" for="hotToggle">
+        <span>Show tap targets</span>
+        <span class="switch"><input type="checkbox" id="hotToggle" checked><span></span></span>
+      </label>
+      <p class="legend" style="margin-top:10px"><i></i>Yellow dots mark what you can tap. Tapping anywhere else flashes them.</p>
+    </div>
+    <div>
+      <h2>Jump to</h2>
+      <div class="jump" id="jump">
+        <button type="button" data-jump="home">Home</button>
+        <button type="button" data-jump="bundles">Bundles</button>
+        <button type="button" data-jump="product">Product page</button>
+        <button type="button" data-jump="cart">Cart</button>
+        <button type="button" data-jump="details">Details</button>
+        <button type="button" data-jump="billing">Billing</button>
+        <button type="button" data-jump="payment">Payment</button>
+        <button type="button" data-jump="confirmation">Confirmation</button>
+      </div>
+    </div>
+    <div>
+      <h2>Try these paths</h2>
+      <ol class="tips">
+        <li><b>Bundle:</b> on Home, pick a specialization on the Fitness Coach card, then Buy Now.</li>
+        <li><b>Pay in full:</b> switch the plan in the cart. The payment plan terms drop out of checkout.</li>
+        <li><b>Card declined:</b> enter <code>4000 0000 0000 0002</code> on Payment.</li>
+        <li><b>PayPal:</b> choose PayPal on Payment to hide the card fields.</li>
+      </ol>
+    </div>
+    <button class="reset" id="reset" type="button">Start over</button>
+  </aside>
+  <button class="panel-fab" id="panelFab" type="button" aria-label="Open prototype controls">?</button>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
